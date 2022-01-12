@@ -1,22 +1,25 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <title>GitHub</title>
 
     <meta name="author" content="JIWON">
-    <meta name="description" content="GitHub is where people build software. More than 31 million people use GitHub to discover, fork, and contribute to over 100 million projects.">
+    <meta name="description"
+        content="GitHub is where people build software. More than 31 million people use GitHub to discover, fork, and contribute to over 100 million projects.">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!-- 뷰포트 설정 
-        디바이스 가로넓이 동일하게 적용, 다양한 디바이스의 스케일 설정, 
-        화면 축소확대 사용여부 설정, 최소,최대 확대값 설정.-->
-    <meta name="viewport" content="width=device-width, initial-scale=1 , user-scalable=no, maximum-scale=1, minimum-scale=1">
-    
-    <!-- 오픈 그래프 type 설정. -->
+
+    <!-- 뷰포트 설정 -->
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1 , user-scalable=no, maximum-scale=1, minimum-scale=1">
+
+    <!-- 오픈 그래프 type -->
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="GitHub">
     <meta property="og:title" content="Build software better, together">
-    <meta property="og:description" content="GitHub clone coding / GitHub is where people build software. More than 31 million people use GitHub to discover, fork, and contribute to over 100 million projects.">
+    <meta property="og:description"
+        content="GitHub clone coding / GitHub is where people build software. More than 31 million people use GitHub to discover, fork, and contribute to over 100 million projects.">
     <meta property="og:image" content="img/logo__github.png">
     <meta property="og:url" content="https://github.com">
 
@@ -24,26 +27,68 @@
     <meta property="twitter:card" content="summary">
     <meta property="twitter:site" content="GitHub">
     <meta property="twitter:title" content="Build software better, together">
-    <meta property="twitter:description" content="GitHub clone coding / GitHub is where people build software. More than 31 million people use GitHub to discover, fork, and contribute to over 100 million projects.">
+    <meta property="twitter:description"
+        content="GitHub clone coding / GitHub is where people build software. More than 31 million people use GitHub to discover, fork, and contribute to over 100 million projects.">
     <meta property="twitter:image" content="img/logo__github.png">
     <meta property="twitter:url" content="https://github.com">
 
-    <!-- favicon 설정 -->
+    <!-- favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-    <link rel="stylesheet" href="./favicon.png"/>
+    <link rel="stylesheet" href="./favicon.png" />
     <link rel="apple-touch-icon" href="favicon.png">
-    <!-- Font 설정 (경량화된 웹폰트를 사용)-->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"/>
-    <link rel="stylesheet" href="./css/main.css"/>
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" />
+    <link rel="stylesheet" href="./css/main.css" />
 </head>
 
 <body>
-    <ul>
-        <li>123</li>
-        <li>456</li>
-        <li>789</li>
-    </ul>
+    <div class="body__container">
+
+        <!-- HEADER  -->
+        <header class="section">
+            <div class="inner">
+
+                <!-- 왼쪽영역 -->
+                <div class="menu-group">
+                    <div class="logo">
+                        <a href="#">GitHub</a>
+                    </div>
+                    <ul class="main-menu">
+                        <li><a href="#">Personal</a></li>
+                        <li><a href="#">Open Source</a></li>
+                        <li><a href="#">Business</a></li>
+                        <li><a href="#">Explore</a></li>
+                    </ul>
+                </div>
+
+                <!-- 오른쪽 영역 -->
+                <div class="sign-group">
+
+                    <div class="btn-group">
+                        <a href="#" class="btn sign-in">Sign in</a>
+                        <a href="#" class="btn btn--primary sign-up">Sign up</a>
+                    </div>
+
+                    <form id="search-form" method="POST" action="">
+                        <input type="text" id="search" class="input--text" placeholder="Search GitHub">
+                        <!-- input으로 데이터 입력받고 전송하는 버튼 필요 (숨길예정) -->
+                        <input type="submit" value="Submit">
+                    </form>
+
+                    <ul class="sub-menu">
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </header>
+
+    </div>
 </body>
 
 </html>
