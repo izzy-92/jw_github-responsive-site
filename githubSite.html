@@ -10,11 +10,9 @@
         content="GitHub is where people build software. More than 31 million people use GitHub to discover, fork, and contribute to over 100 million projects.">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <!-- 뷰포트 설정 -->
     <meta name="viewport"
         content="width=device-width, initial-scale=1 , user-scalable=no, maximum-scale=1, minimum-scale=1">
 
-    <!-- 오픈 그래프 type -->
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="GitHub">
     <meta property="og:title" content="Build software better, together">
@@ -23,7 +21,7 @@
     <meta property="og:image" content="img/logo__github.png">
     <meta property="og:url" content="https://github.com">
 
-    <!-- 트위터 카드 -->
+    <!-- TWITTER CARD -->
     <meta property="twitter:card" content="summary">
     <meta property="twitter:site" content="GitHub">
     <meta property="twitter:title" content="Build software better, together">
@@ -32,7 +30,7 @@
     <meta property="twitter:image" content="img/logo__github.png">
     <meta property="twitter:url" content="https://github.com">
 
-    <!-- favicon -->
+    <!-- FAVICON -->
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="./favicon.png" />
     <link rel="apple-touch-icon" href="favicon.png">
@@ -49,10 +47,9 @@
 
         <!-- HEADER  -->
         <header class="section">
-            <div class="inner">
+            <div class="inner clearfix">
 
-                <!-- 왼쪽영역 -->
-                <div class="menu-group">
+                <div class="menu-group float--left">
                     <div class="logo">
                         <a href="#">GitHub</a>
                     </div>
@@ -64,8 +61,7 @@
                     </ul>
                 </div>
 
-                <!-- 오른쪽 영역 -->
-                <div class="sign-group">
+                <div class="sign-group float--right">
 
                     <div class="btn-group">
                         <a href="#" class="btn sign-in">Sign in</a>
@@ -74,7 +70,6 @@
 
                     <form id="search-form" method="POST" action="">
                         <input type="text" id="search" class="input--text" placeholder="Search GitHub">
-                        <!-- input으로 데이터 입력받고 전송하는 버튼 필요 (숨길예정) -->
                         <input type="submit" value="Submit">
                     </form>
 
@@ -87,6 +82,31 @@
 
             </div>
         </header>
+
+        <!-- VISUAL -->
+        <section class="section section--visual">
+            <div class="inner">
+
+                <!-- 공통 Style 만들예정! (요약 제목,설명) -->
+                <div class="summary">
+                    <div class="summary__title">
+                        How people build software
+                    </div>
+                    <div class="summary__description">
+                        Millions of developers use GitHub to build personal projects, support their businesses, and work together on open source technologies.
+                    </div>
+                </div>
+
+                <form id="sign-form" method="POST" action="">
+
+                </form>
+
+            </div>
+        </section>
+
+
+
+
 
     </div>
 </body>

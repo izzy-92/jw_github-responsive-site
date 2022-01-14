@@ -76,6 +76,46 @@ a {
   color: #cacaca;
 }
 
+/* FLOAT CLEARFIX */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+.float--left {
+  float: left;
+}
+.float--right {
+  float: right;
+}
+
+/* SUMMARY */
+.summary {
+  
+}
+.summary__title {
+  margin-bottom: 18px;
+  font-size: 38px;
+  font-weight: 300;
+  line-height: 1.25;
+}
+.summary__description {
+  font-size: 26px;
+  font-weight: 300;
+  color: #767676;
+  line-height: 1.5;
+}
+
+/* SECTION & INNER */
+.section {
+  position: relative;
+}
+.section .inner {
+  max-width: 980px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  position: relative;
+}
 
 /* HEADER */
 header {
@@ -85,9 +125,7 @@ header {
 }
 
 header .inner {
-  max-width: 980px;
   height: 78px;
-  margin: 0 auto;
 }
 
 header .menu-group {
@@ -122,4 +160,67 @@ header .main-menu li a {
 }
 header .main-menu li a:hover {
   color: #4078c0;
+}
+header .sign-group {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+header .btn-group {
+  order: 2;
+  display: flex; /* btn 여백값을 위해 display 속성을 추가하였다. */
+}
+header .btn-group .sign-in {
+  margin-right: 4px;
+}
+
+#search-form {
+  order: 1;
+  margin-right: 12px;
+}
+
+#search {
+  width: 160px;
+  font-size: 14px;
+}
+
+/* submit 버튼 지우기 위한 선택자 추가 */
+#search + [type="submit"] { 
+  display: none;
+}
+
+header .sub-menu {
+  display: flex;
+  margin-right: 10px;
+}
+
+header .sub-menu li a {
+  padding: 8px;
+  display: block;
+  font-size: 14px;
+  color: #3c4516;
+}
+header .sub-menu li a:hover {
+  color: #4078c0;
+}
+
+/* VISUAL */
+.section--visual {
+  background-image: url("../img/bg.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom left;
+}
+.section--visual .inner {
+  padding: 160px 0;
+}
+.section--visual .summary__title {
+  color: #fff;
+  font-size: 54px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, .25), 
+               0 1px 25px rgba(0, 0, 0, .75);
+}
+.section--visual .summary__description {
+  color: #fff;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, .25), 
+               0 1px 25px rgba(0, 0, 0, .75);
 }
