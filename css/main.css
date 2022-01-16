@@ -45,7 +45,7 @@ a {
   background: #55a532 linear-gradient(#91dd80, #55ae2e);
 }
 
-/* INPUT TEXT */
+/* INPUT TEXT 양식 */
 .input--text {
   height: 34px;
   padding: 0 10px;
@@ -209,10 +209,33 @@ header .sub-menu li a:hover {
   background-image: url("../img/bg.jpg");
   background-repeat: no-repeat;
   background-position: bottom left;
+  background-size: cover;
+  
 }
+/* 배경 이미지가 밝아서 배경이미지 바로 앞에 
+ 어두운 배경색의 요소를 깔아 약간 어둡게 만들어주기 위한 가상요소선택자를 추가하였다. */
+.section--visual::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0; 
+  /*방법1) width와 height 100%을 적용하여 섹션을 완벽하게 덮을수 있도록 만들었다. */
+  width: 100%;  /* 방법2) position 값을 top,left,right,bottom을 0씩 주어도 동일한 결과가 나오는지 궁금했는데 
+                    적용시켜보니 width,height 100% 와 동일한 효과를 가졌다! */
+  height: 100%;
+  background: rgba(0, 0, 0, .3); 
+}
+
 .section--visual .inner {
   padding: 160px 0;
+  display: flex;
 }
+
+.section--visual .summary {
+  flex : 1;
+  margin-right: 90px;
+}
+
 .section--visual .summary__title {
   color: #fff;
   font-size: 54px;
@@ -223,4 +246,36 @@ header .sub-menu li a:hover {
   color: #fff;
   text-shadow: 0 1px 1px rgba(0, 0, 0, .25), 
                0 1px 25px rgba(0, 0, 0, .75);
+}
+
+/* id 선택자는 고유하므로 기본적으로 조상요소 선택자가 필요없다.*/
+#sign-form {
+  width: 340px;
+  margin-top: 13px;
+}
+
+#sign-form li {
+  margin-bottom: 17px;
+}
+#sign-form li:last-child {
+  margin-bottom: 0;
+}
+
+#sign-form .input--text {
+  width: 100%;
+  height: 40px;
+}
+#sign-form .caption {
+  font-size: 12px;
+  margin-top: 5px;
+  color: rgba(255,255,255, .6);
+  line-height: 1.5;
+  text-align: center;
+}
+#sign-form [type="submit"] {
+  width: 100%;
+  height: 62px;
+  padding: 0 25px;
+  font-size: 20px;
+  justify-content: center;
 }
