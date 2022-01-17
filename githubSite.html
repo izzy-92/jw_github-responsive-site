@@ -89,27 +89,28 @@
 
                 <!-- 요약 제목,설명 -->
                 <div class="summary">
-                    <div class="summary__title">
+                    <h2 class="summary__title">
                         How&nbsp;people build&nbsp;software
-                    </div>
-                    <div class="summary__description">
-                        Millions of developers use GitHub to build personal projects, support their businesses, and&nbsp;work together on open source technologies.
-                    </div>
+                    </h2>
+                    <p class="summary__description">
+                        Millions of developers use GitHub to build personal projects, support their businesses,
+                        and&nbsp;work together on open source technologies.
+                    </p>
                 </div>
 
                 <!-- 간단한 회원가입 양식 (사용자이름,이메일,패스워드)-->
                 <form id="sign-form" method="POST" action="">
                     <ul>
-                        <li><input type="text" class="input--text" placeholder="Pick a username"></li> 
+                        <li><input type="text" class="input--text" placeholder="Pick a username"></li>
                         <li><input type="email" class="input--text" placeholder="Your email address"></li>
                         <li>
                             <input type="password" class="input--text" placeholder="Create a password">
                             <p class="caption">Use at least one letter, one numeral, and seven characters.</p>
                         </li>
                         <li>
-                            <!-- 해당 버튼은 submit 기능만 하므로 input type="submit"대신 button 태그를 사용해보도록하겠다.-->
                             <button type="submit" class="btn btn--primary">Sign up for GitHub</button>
-                            <p class="caption">By clicking "Sign up for GitHub", you agree to our terms of service and privacy policy. We'll occasionally send you account related emails.</p>
+                            <p class="caption">By clicking "Sign up for GitHub", you agree to our terms of service and
+                                privacy policy. We'll occasionally send you account related emails.</p>
                         </li>
                     </ul>
                 </form>
@@ -117,11 +118,119 @@
             </div>
         </section>
 
+        <!-- FEATURE -->
+        <section class="section section--feature">
 
+            <!-- 요약 텍스트 영역 -->
+            <div class="summary">
+                <h2 class="summary__title">
+                    Welcome home, developers
+                </h2>
+                <p class="summary__description">
+                    GitHub fosters a fast, flexible, and collaborative development process that lets you work on your
+                    own or with others.
+                </p>
+            </div>
+
+            <!-- Video (youtube 영역) -->
+            <div class="video">
+                <!-- 비율에 맞게 나오도록 반응형의 중간 매개체 요소 생성! -->
+                <div class="video-ratio">
+                    <iframe width="1118" height="638" src="https://www.youtube.com/embed/afvT1c1ii0c"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <!-- tiles 영역 -->
+            <div class="tiles">
+                <div class="inner">
+
+                    <ul class="clearfix">
+                        <li>
+                            <img src="img/feature-tile__build.png" alt="build" />
+                            <h3 class="">For everything you build</h3>
+                            <p class="">Host and manage your code on GitHub. You can keep your work private or share it
+                                with the world.</p>
+                        </li>
+                        <li>
+                            <img src="img/feature-tile__work.png" alt="work" />
+                            <h3 class="">A better way to work</h3>
+                            <p class="">From hobbyists to professionals, GitHub helps developers simplify the way they
+                                build software.</p>
+                        </li>
+                        <li>
+                            <img src="img/feature-tile__projects.png" alt="projectes" />
+                            <h3 class="">Millions of projects</h3>
+                            <p class="">GitHub is home to millions of open source projects. Try one out or get inspired
+                                to create your own.</p>
+                        </li>
+                        <li>
+                            <img src="img/feature-tile__platform.png" alt="platform" />
+                            <h3 class="">One platform, from start to finish</h3>
+                            <p class="">With hundreds of integrations, GitHub is flexible enough to be at the center of
+                                your development process.</p>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- Where is (Google Maps API)-->
+        <section class="section section--where-is">
+            <div class="inner">
+
+                <div class="summary">
+                    <div class="summary__title">
+                        Where is GitHub?
+                    </div>
+                    <div class="summary__description">
+                        GitHub is where people build software. More than 18 million people use GitHub to discover, fork,
+                        and contribute to over 48 million projects.
+                    </div>
+                </div>
+
+                <!-- Maps -->
+                <div id="map"></div>
+
+            </div>
+        </section>
 
 
 
     </div>
+
+    <!-- Google Maps API를 위한 스크립트 추가 -->
+    <script>
+        function initMap() {
+            const myLatLng = {
+                lat: 37.782293,
+                lng: -122.391240
+            }
+            // 초기화
+            const map = new google.maps.Map(
+                document.getElementById('map'), {
+                    // 위도,경도 위치 옵션
+                    center: myLatLng,
+                    scrollwheel: false,
+                    zoom: 18
+                }
+            );
+            const marker = new google.maps.Marker({
+                position: myLatLng,
+                map: map,
+                title: 'GitHub'
+            });
+        }
+    </script>
+    <!-- javascript API를 실행할 주소 입력 -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTQIlxBn5AfKGvsfJiormAE1esN3fcCkg&callback=initMap"
+        async defer></script>
+
 </body>
 
 </html>
