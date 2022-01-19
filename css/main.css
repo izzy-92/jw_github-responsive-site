@@ -431,3 +431,34 @@ footer .logo {
 footer .logo:hover svg {
   fill: #4078c0;
 }
+
+/* MEDIA */
+@media (max-width: 1024px) { /* 뷰포트 1024px 이상일때는 데스크탑ver, 1024px 이하일 경우 태블릿ver */
+    header.section .inner {
+      max-width: none;
+      height: auto;
+      padding: 0 20px;
+    }
+    header .menu-group, 
+    header .sign-group  { /* 헤더메뉴(반응형), 수직으로 쌓이도록 초기화 */
+      float: none;
+    }
+    header .toggle {
+      display: none;
+    }
+    header .logo {
+      padding: 12px 0; 
+    }
+    #toggle-btn {
+      background: url("../img/toggle-btn.svg");
+      width: 18px;
+      height: 24px;
+      position: absolute;
+      top: 16px;
+      right: 20px;
+      cursor: pointer;
+      text-indent: -9999px;
+    }
+
+
+}
